@@ -1,21 +1,38 @@
 import { useEffect, useState } from "react";
+import type { MetroStatusResponse } from "./types/api";
 
-function App() {
-  const [data, setData] = useState<any>(null);
+export default function App() {
+  const [data, setData] = useState<MetroStatusResponse | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     fetch("/api/status/metro")
-      .then((r) => r.json())
+      .then(async (r) => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return (await r.json()) as MetroStatusResponse;
+      })
       .then(setData)
-      .catch(console.error);
+      .catch((e) => setError(e?.message ?? String(e)));
   }, []);
 
   return (
-    <main style={{ padding: 24 }}>
+    <main style={{ padding: 24, fontFamily: "system-ui, sans-serif" }}>
       <h1>WMATA Status FE</h1>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+
+      {error && <p style={{ color: "crimson" }}>Error: {error}</p>}
+      {!error && !data && <p>Loading…</p>}
+
+      {data && (
+        <>
+          <p>
+            Updated: <b>{data.meta.lastUpdated}</b>{" "}
+            {data.meta.stale ? "(stale)" : ""}
+          </p>
+          <pre style={{ whiteSpace: "pre-wrap" }}>
+            {JSON.stringify(data.data.lines.slice(0, 1), null, 2)}
+          </pre>
+        </>
+      )}
     </main>
   );
 }
-
-export default App;
