@@ -1,0 +1,153 @@
+# Page snapshot
+
+```yaml
+- main [ref=e3]:
+  - heading "WMATA Status" [level=1] [ref=e4]
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - heading "Accessibility" [level=2] [ref=e7]
+      - generic [ref=e8]: "Updated: 6:06:16 PM"
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - generic [ref=e11]: Elevators down
+        - generic [ref=e12]: "5"
+      - generic [ref=e13]:
+        - generic [ref=e14]: Escalators down
+        - generic [ref=e15]: "40"
+      - generic [ref=e16]:
+        - generic [ref=e17]: Planned
+        - generic [ref=e18]: "11"
+      - generic [ref=e19]:
+        - generic [ref=e20]: Unplanned
+        - generic [ref=e21]: "34"
+      - generic [ref=e22]:
+        - generic [ref=e23]: Total
+        - generic [ref=e24]: "45"
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - button "All (45)" [ref=e27] [cursor=pointer]
+        - button "Unplanned (34)" [ref=e28] [cursor=pointer]
+        - button "Planned (11)" [ref=e29] [cursor=pointer]
+      - button "Show all (45)" [ref=e30] [cursor=pointer]
+    - heading "Outages (all) — showing 10 of 45" [level=3] [ref=e31]
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: ESCALATOR · K03X03
+          - generic [ref=e36]: unplanned
+        - generic [ref=e37]: "Station: Virginia Square-GMU — Location: Escalator between street and mezzanine — Issue: Service Call"
+        - generic [ref=e38]: "ETA: 2/11/2026, 11:59:59 PM"
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - generic [ref=e41]: ESCALATOR · A10X03
+          - generic [ref=e42]: unplanned
+        - generic [ref=e43]: "Station: Medical Center — Location: Escalator between street and mezzanine — Issue: Other"
+        - generic [ref=e44]: "ETA: 2/11/2026, 11:59:59 PM"
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - generic [ref=e47]: ESCALATOR · F01N03
+          - generic [ref=e48]: unplanned
+        - generic [ref=e49]: "Station: Gallery Pl-Chinatown, 7th and H Street/Chinatown Entrance — Location: Escalator between street and middle landing — Issue: Other"
+        - generic [ref=e50]: "ETA: 2/11/2026, 11:59:59 PM"
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - generic [ref=e53]: ESCALATOR · F06S03
+          - generic [ref=e54]: unplanned
+        - generic [ref=e55]: "Station: Anacostia, Howard Road Entrance — Location: Escalator between mezzanine and platform — Issue: Service Call"
+        - generic [ref=e56]: "ETA: 2/11/2026, 11:59:59 PM"
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - generic [ref=e59]: ESCALATOR · D06X04
+          - generic [ref=e60]: unplanned
+        - generic [ref=e61]: "Station: Eastern Market — Location: Escalator between mezzanine and platform — Issue: Service Call"
+        - generic [ref=e62]: "ETA: 2/11/2026, 11:59:59 PM"
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - generic [ref=e65]: ESCALATOR · B03N01
+          - generic [ref=e66]: unplanned
+        - generic [ref=e67]: "Station: Union Station, 1st Street, NW/Amtrak Station Entrance — Location: Escalator between Amtrak Station and mezzanine — Issue: Service…"
+        - generic [ref=e68]: "ETA: 2/11/2026, 11:59:59 PM"
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - generic [ref=e71]: ESCALATOR · A01W05
+          - generic [ref=e72]: unplanned
+        - generic [ref=e73]: "Station: Metro Center, G and 13th St Entrance — Location: Escalator between mezzanine and platform to Shady Grove — Issue: Service Call"
+        - generic [ref=e74]: "ETA: 2/11/2026, 11:59:59 PM"
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - generic [ref=e77]: ESCALATOR · E07X01
+          - generic [ref=e78]: unplanned
+        - generic [ref=e79]: "Station: West Hyattsville — Location: Escalator between mezzanine and platform to Greenbelt — Issue: Major Repair"
+        - generic [ref=e80]: "ETA: 2/16/2026, 11:59:59 PM"
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - generic [ref=e83]: ESCALATOR · D01X01
+          - generic [ref=e84]: unplanned
+        - generic [ref=e85]: "Station: Federal Triangle — Location: Escalator between street and middle landing — Issue: Service Call"
+        - generic [ref=e86]: "ETA: 2/11/2026, 11:59:59 PM"
+      - generic [ref=e87]:
+        - generic [ref=e88]:
+          - generic [ref=e89]: ESCALATOR · D08S02
+          - generic [ref=e90]: unplanned
+        - generic [ref=e91]: "Station: Stadium-Armory, D.C. General Hospital Entrance — Location: Escalator between street and mezzanine — Issue: Minor Repair"
+        - generic [ref=e92]: "ETA: 2/10/2026, 11:59:59 PM"
+  - generic [ref=e93]:
+    - generic [ref=e94]:
+      - heading "Red Line" [level=2] [ref=e95]
+      - generic [ref=e96]: Normal
+    - paragraph [ref=e97]: "Service issues: 0 · Alerts: 0"
+    - generic [ref=e98]: "debug: status=Normal defaultOpen= showAllService=false"
+  - generic [ref=e99]:
+    - generic [ref=e100]:
+      - heading "Blue Line" [level=2] [ref=e101]
+      - generic [ref=e102]: Normal
+    - paragraph [ref=e103]: "Service issues: 0 · Alerts: 0"
+    - generic [ref=e104]: "debug: status=Normal defaultOpen= showAllService=false"
+  - generic [ref=e105]:
+    - generic [ref=e106]:
+      - heading "Yellow Line" [level=2] [ref=e107]
+      - generic [ref=e108]: Normal
+    - paragraph [ref=e109]: "Service issues: 0 · Alerts: 0"
+    - generic [ref=e110]: "debug: status=Normal defaultOpen= showAllService=false"
+  - generic [ref=e111]:
+    - generic [ref=e112]:
+      - heading "Orange Line" [level=2] [ref=e113]
+      - generic [ref=e114]: Major
+    - paragraph [ref=e115]: "Service issues: 1 · Alerts: 0"
+    - generic [ref=e116]:
+      - generic [ref=e117]:
+        - heading "Service" [level=3] [ref=e118]
+        - button "Show less" [ref=e119] [cursor=pointer]
+      - generic [ref=e121]:
+        - generic [ref=e122]:
+          - generic [ref=e123]: Delay
+          - generic [ref=e124]: Major
+        - generic [ref=e125]: Trains are single tracking between Vienna and West Falls Church because of a fire on the track at West Falls Church. Cu…
+        - button "More" [ref=e127] [cursor=pointer]
+    - generic [ref=e128]: "debug: status=Major defaultOpen= showAllService=true"
+  - generic [ref=e129]:
+    - generic [ref=e130]:
+      - heading "Green Line" [level=2] [ref=e131]
+      - generic [ref=e132]: Minor
+    - paragraph [ref=e133]: "Service issues: 0 · Alerts: 1"
+    - generic [ref=e134]:
+      - generic [ref=e135]:
+        - heading "Alerts" [level=3] [ref=e136]
+        - button "Show all (1)" [ref=e137] [cursor=pointer]
+      - generic [ref=e139]:
+        - generic [ref=e140]:
+          - generic [ref=e141]: Alert
+          - generic [ref=e142]: Minor
+        - generic [ref=e143]: The Half Street entrance will be closed due to escalator replacement. The New Jersey Ave entrance will remain open. For…
+        - generic [ref=e144]:
+          - button "More" [ref=e145] [cursor=pointer]
+          - link "link" [ref=e147] [cursor=pointer]:
+            - /url: https://wmata.com
+    - generic [ref=e148]: "debug: status=Minor defaultOpen= showAllService=false"
+  - generic [ref=e149]:
+    - generic [ref=e150]:
+      - heading "Silver Line" [level=2] [ref=e151]
+      - generic [ref=e152]: Normal
+    - paragraph [ref=e153]: "Service issues: 0 · Alerts: 0"
+    - generic [ref=e154]: "debug: status=Normal defaultOpen= showAllService=false"
+```
