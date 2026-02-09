@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
 import type { MetroStatusResponse } from "./types/api";
+import MetroLineCard from "./components/MetroLineCard";
+import AccessibilityPanel from "./components/AccessibilityPanel";
+import { useAccessibility } from "./hooks/useAccessibility";
 
 export default function App() {
-  const [data, setData] = useState<MetroStatusResponse | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [metro, setMetro] = useState<MetroStatusResponse | null>(null);
+  const [metroError, setMetroError] = useState<string | null>(null);
+
+  const { data: access, error: accessError } = useAccessibility();
 
   useEffect(() => {
     fetch("/api/status/metro")
@@ -11,28 +16,24 @@ export default function App() {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return (await r.json()) as MetroStatusResponse;
       })
-      .then(setData)
-      .catch((e) => setError(e?.message ?? String(e)));
+      .then(setMetro)
+      .catch((e) => setMetroError(e?.message ?? String(e)));
   }, []);
 
   return (
-    <main style={{ padding: 24, fontFamily: "system-ui, sans-serif" }}>
-      <h1>WMATA Status FE</h1>
+    <main style={{ padding: 24, maxWidth: 800, margin: "0 auto" }}>
+      <h1>WMATA Status</h1>
 
-      {error && <p style={{ color: "crimson" }}>Error: {error}</p>}
-      {!error && !data && <p>Loading…</p>}
+      {accessError && <p style={{ color: "crimson" }}>Accessibility: {accessError}</p>}
+      {access && <AccessibilityPanel data={access} />}
 
-      {data && (
-        <>
-          <p>
-            Updated: <b>{data.meta.lastUpdated}</b>{" "}
-            {data.meta.stale ? "(stale)" : ""}
-          </p>
-          <pre style={{ whiteSpace: "pre-wrap" }}>
-            {JSON.stringify(data.data.lines.slice(0, 1), null, 2)}
-          </pre>
-        </>
-      )}
+      {metroError && <p style={{ color: "crimson" }}>Metro: {metroError}</p>}
+      {!metroError && !metro && <p>Loading Metro…</p>}
+
+      {metro &&
+        metro.data.lines.map((line) => (
+          <MetroLineCard key={line.code} line={line} />
+        ))}
     </main>
   );
 }
